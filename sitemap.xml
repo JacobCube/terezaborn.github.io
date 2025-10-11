@@ -10,4 +10,12 @@
   <url>
     <loc>https://terezaborn.com/contact</loc>
   </url>
+  <url>
+    <loc>https://ilustraterka.wixsite.com/my-site</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.instagram.com/_ilustraterka_/</loc>
+    <priority>0.3</priority>
+  </url>
 </urlset>
