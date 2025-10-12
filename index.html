@@ -6,16 +6,18 @@
   <title>Tereza Born | Illustrator & Artist</title>
   
   <!-- SEO meta -->
-  <meta name="description" content="Tereza Born is an illustrator and artist creating expressive, colorful works for editorial and publishing. Explore her portfolio and links.">
-  <meta name="keywords" content="illustration, illustrator, artist, tereza born, ilustraterka, editorial art, portfolio">
+  <meta name="description" content="Tereza Born – profesionální ilustrátorka a výtvarnice. Specializuje se na knižní ilustrace, originální umění a profesionální zakázky. Prohlédněte si portfolio a kontaktujte ji.">
+  <meta name="keywords" content="ilustrace, ilustrátorka, knižní ilustrace, Tereza Born, originální umění, galerie, profesionální ilustrace">
+  
   <meta name="author" content="Tereza Born">
   <link rel="canonical" href="https://terezaborn.com/" />
 
   <!-- Open Graph / social -->
   <meta property="og:title" content="Tereza Born | Illustrator & Artist">
-  <meta property="og:description" content="Explore illustrations and artwork by Tereza Born.">
+  <meta property="og:description" content="Discover the captivating world of illustrations by Tereza Born.">
   <meta property="og:image" content="https://terezaborn.com/preview.jpg">
   <meta property="og:url" content="https://terezaborn.com">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
 <!-- Structured Data for SEO -->
@@ -26,80 +28,140 @@
   "name": "Tereza Born",
   "url": "https://terezaborn.com",
   "image": "https://terezaborn.com/preview.jpg",
+  "jobTitle": "Illustrator & Artist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Tereza Born Studio",
+    "url": "https://terezaborn.com"
+  },
   "sameAs": [
     "https://www.instagram.com/_ilustraterka_/",
     "https://ilustraterka.wixsite.com/my-site"
   ],
-  "jobTitle": "Illustrator & Artist",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Tereza Born Illustration",
-    "url": "https://terezaborn.com"
+  "description": {
+    "cs": "Profesionální ilustrátorka a výtvarnice, specializuje se na knižní ilustrace a originální umění.",
+    "en": "Professional illustrator and artist specializing in book illustration and original artwork."
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "tereza.kostkova@gmail.com",
+    "email": "hello@terezaborn.com",
     "contactType": "professional"
   }
 }
 </script>
-  
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #fafafa;
-      color: #222;
-      margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
-    }
-    p {
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-    }
-    .links a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      background: #222;
-      color: white;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .links a:hover {
-      background: #444;
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: #666;
-    }
-  </style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+        header { background: #f4f4f4; padding: 1rem; text-align: center; }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li { margin: 0 1rem; }
+        nav a { text-decoration: none; color: #333; }
+        .lang-picker { margin-left: auto; }
+        main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        section { margin-bottom: 3rem; }
+        h1, h2 { color: #222; }
+        .hero { text-align: center; background: #e8f4f8; padding: 4rem 2rem; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .portfolio-item img { width: 100%; height: auto; border-radius: 8px; }
+        footer { background: #333; color: #fff; text-align: center; padding: 1rem; }
+        .hidden { display: none; }
+        /* Language specific styles if needed */
+    </style>
 </head>
-<body>
-  <h1>Tereza Born</h1>
-  <h2>Illustrator & Artist</h2>
-  <p>
-    Expressive illustrations blending emotion, storytelling, and playful color.  
-    Based in Europe — open to collaborations and commissions.
-  </p>
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="lang-picker">
+                <button onclick="switchLang('en')">EN</button> |
+                <button onclick="switchLang('cs')">CS</button>
+            </div>
+        </nav>
+    </header>
 
-  <div class="links">
-    <a href="https://www.instagram.com/_ilustraterka_/" target="_blank">Instagram</a>
-    <a href="https://ilustraterka.wixsite.com/my-site" target="_blank">Alternative Site</a>
-    <a href="mailto:tereza.kostkova@gmail.com">Email</a>
-  </div>
+    <main>
+        <section id="home" class="hero">
+            <h1 class="en">Ilustraterka</h1>
+            <h1 class="cs hidden">Ilustraterka</h1>
+            <p class="en">Professional Illustrations by Tereza Born</p>
+            <p class="cs hidden">Profesionální ilustrace od Terezy Bornové</p>
+            <!-- Placeholder hero image -->
+            <img src="https://via.placeholder.com/800x400?text=Hero+Illustration" alt="Hero illustration showcasing Tereza Born's style" width="800" height="400">
+        </section>
 
-  <footer>
-    © 2025 Tereza Born — All Rights Reserved
-  </footer>
+        <section id="about">
+            <h2 class="en">About Me</h2>
+            <h2 class="cs hidden">O mně</h2>
+            <p class="en">Hi, I'm Tereza Born, a passionate professional illustrator based in the Czech Republic. With a love for whimsical characters and vibrant colors, I create engaging illustrations for books, magazines, advertising, and digital projects. My work draws inspiration from everyday life, nature, and folklore.</p>
+            <p class="cs hidden">Ahoj, jsem Tereza Born, vášnivá profesionální ilustrátorka se sídlem v České republice. S láskou k výstředním postavám a živým barvám tvořím poutavé ilustrace pro knihy, časopisy, reklamu a digitální projekty. Moje práce čerpá inspiraci z každodenního života, přírody a folklóru.</p>
+            <!-- Add photo -->
+            <img src="https://via.placeholder.com/300x300?text=Tereza+Born" alt="Portrait of illustrator Tereza Born" width="300" height="300">
+        </section>
+
+        <section id="portfolio">
+            <h2 class="en">Portfolio</h2>
+            <h2 class="cs hidden">Portfolio</h2>
+            <p class="en">Explore some of my recent illustrations.</p>
+            <p class="cs hidden">Prohlédněte si některé z mých nejnovějších ilustrací.</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x400?text=Illustration+1" alt="Whimsical character illustration by Tereza Born">
+                    <p class="en">Whimsical Forest Adventure</p>
+                    <p class="cs hidden">Výstřední dobrodružství v lese</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x400?text=Illustration+2" alt="Vibrant nature scene illustration by Tereza Born">
+                    <p class="en">Vibrant Nature Scene</p>
+                    <p class="cs hidden">Živá přírodní scéna</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x400?text=Illustration+3" alt="Book cover illustration by Tereza Born">
+                    <p class="en">Book Cover Design</p>
+                    <p class="cs hidden">Návrh obálky knihy</p>
+                </div>
+                <!-- Add more as needed -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="en">Contact</h2>
+            <h2 class="cs hidden">Kontakt</h2>
+            <p class="en">Ready to collaborate? Get in touch!</p>
+            <p class="cs hidden">Připraveni na spolupráci? Kontaktujte mě!</p>
+            <ul>
+                <li class="en">Email: <a href="mailto:hello@ilustraterka.com">hello@ilustraterka.com</a></li>
+                <li class="cs hidden">E-mail: <a href="mailto:hello@ilustraterka.com">hello@ilustraterka.com</a></li>
+                <li><a href="https://www.instagram.com/_ilustraterka_/" target="_blank">Instagram: @_ilustraterka_</a></li>
+                <!-- Add more social links -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tereza Born | Ilustraterka. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            // Hide all
+            document.querySelectorAll('.en, .cs').forEach(el => el.classList.add('hidden'));
+            // Show selected
+            document.querySelectorAll('.' + lang).forEach(el => el.classList.remove('hidden'));
+            // Update html lang
+            document.documentElement.lang = lang;
+            // Update title for SEO (basic, full SEO needs server-side)
+            if (lang === 'cs') {
+                document.title = 'Ilustraterka | Tereza Born | Profesionální ilustrátorka';
+            } else {
+                document.title = 'Ilustraterka | Tereza Born | Professional Illustrator';
+            }
+        }
+        // Default to EN
+        switchLang('en');
+    </script>
 </body>
 </html>
