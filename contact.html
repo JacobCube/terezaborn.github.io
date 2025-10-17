@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustratérka - Kontakt</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lucida Sans Unicode', sans-serif;
+            background-color: white;
+            color: black;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        header img.logo {
+            max-width: 300px;
+        }
+        select#lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #FF0000;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #FF0000;
+        }
+        main {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .content {
+            width: 60%;
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .side-left, .side-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 0;
+            width: 20%;
+        }
+        .side-left img, .side-right img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+        .side-left {
+            left: 0;
+        }
+        .side-right {
+            right: 0;
+        }
+        .side-right img {
+            transform: scaleX(-1);
+        }
+        .contact-img {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        .footer-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        .footer-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="logo" src="/gallery/Untitled-1.png" alt="Illustratérka">
+    <select id="lang-switch">
+        <option value="cs">CS</option>
+        <option value="en">EN</option>
+    </select>
+    <nav>
+        <a href="index.html" data-key="home">Domů</a>
+        <a href="about.html" data-key="about">O mně</a>
+        <a href="contact.html" data-key="contact">Kontakt</a>
+    </nav>
+</header>
+<main>
+    <div class="side-left">
+        <img src="/gallery/side%20l_edited_edited_edited_edited_edited.png" alt="Left line">
+    </div>
+    <div class="side-right">
+        <img src="/gallery/side%20l_edited_edited_edited_edited_edited.png" alt="Right line">
+    </div>
+    <div class="content">
+        <h1 data-key="contact_title">Kontakt</h1>
+        <img class="contact-img" src="/gallery/ill_login_001.png" alt="Tereza with contact info">
+        <p data-key="contact_email">email: tereza.born@gmail.com</p>
+        <img class="footer-img" src="/gallery/footer.png" alt="Footer">
+    </div>
+</main>
+
+<script>
+    const texts = {
+        cs: {
+            home: 'Domů',
+            about: 'O mně',
+            contact: 'Kontakt',
+            contact_title: 'Kontakt',
+            contact_email: 'email: tereza.born@gmail.com'
+        },
+        en: {
+            home: 'Home',
+            about: 'About me',
+            contact: 'Contact',
+            contact_title: 'Contact',
+            contact_email: 'email: tereza.born@gmail.com'
+        }
+    };
+
+    let lang = localStorage.getItem('lang') || 'cs';
+    document.getElementById('lang-switch').value = lang;
+    updateLanguage();
+
+    document.getElementById('lang-switch').addEventListener('change', (e) => {
+        lang = e.target.value;
+        localStorage.setItem('lang', lang);
+        updateLanguage();
+    });
+
+    function updateLanguage() {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            el.textContent = texts[lang][el.dataset.key];
+        });
+        document.documentElement.lang = lang;
+    }
+</script>
+</body>
+</html>

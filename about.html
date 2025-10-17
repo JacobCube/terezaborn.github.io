@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustratérka - O mně</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lucida Sans Unicode', sans-serif;
+            background-color: white;
+            color: black;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        header img.logo {
+            max-width: 300px;
+        }
+        select#lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #FF0000;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #FF0000;
+        }
+        main {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .content {
+            width: 60%;
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .side-left, .side-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 0;
+            width: 20%;
+        }
+        .side-left img, .side-right img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+        .side-left {
+            left: 0;
+        }
+        .side-right {
+            right: 0;
+        }
+        .side-right img {
+            transform: scaleX(-1);
+        }
+        .about-img {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        .footer-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        .footer-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="logo" src="/gallery/Untitled-1.png" alt="Illustratérka">
+    <select id="lang-switch">
+        <option value="cs">CS</option>
+        <option value="en">EN</option>
+    </select>
+    <nav>
+        <a href="index.html" data-key="home">Domů</a>
+        <a href="about.html" data-key="about">O mně</a>
+        <a href="contact.html" data-key="contact">Kontakt</a>
+    </nav>
+</header>
+<main>
+    <div class="side-left">
+        <img src="/gallery/side%20l_edited_edited_edited_edited_edited.png" alt="Left line">
+    </div>
+    <div class="side-right">
+        <img src="/gallery/side%20l_edited_edited_edited_edited_edited.png" alt="Right line">
+    </div>
+    <div class="content">
+        <h1 data-key="about_title">O mně</h1>
+        <img class="about-img" src="/gallery/dont know what to do.jpg" alt="Tereza at work">
+        <p data-key="about_text">Jmenuji se Tereza a vystudovala jsem ilustraci na univerzitě ve Velké Británii. Zábavám se především digitální ilustrací, ale ráda pracuji i v tradiční části ilustrace a to se odráží v mé praxi. Soustředím se v dětských předěveších na poučitelných liniích, ale také ráda pracuji s texturami a jemnějším vizuálem.</p>
+        <p data-key="contact_invite">Pokud Vás má tvorba zaujala, neváhejte mě kontaktovat!</p>
+        <img class="footer-img" src="/gallery/footer.png" alt="Footer">
+    </div>
+</main>
+
+<script>
+    const texts = {
+        cs: {
+            home: 'Domů',
+            about: 'O mně',
+            contact: 'Kontakt',
+            about_title: 'O mně',
+            about_text: 'Jmenuji se Tereza a vystudovala jsem ilustraci na univerzitě ve Velké Británii. Zábavám se především digitální ilustrací, ale ráda pracuji i v tradiční části ilustrace a to se odráží v mé praxi. Soustředím se v dětských předěveších na poučitelných liniích, ale také ráda pracuji s texturami a jemnějším vizuálem.',
+            contact_invite: 'Pokud Vás má tvorba zaujala, neváhejte mě kontaktovat!'
+        },
+        en: {
+            home: 'Home',
+            about: 'About me',
+            contact: 'Contact',
+            about_title: 'About me',
+            about_text: 'My name is Tereza and I studied illustration at a university in Great Britain. I mainly enjoy digital illustration, but I also like working in the traditional part of illustration, which is reflected in my practice. I focus on children\'s pretexts with instructive lines, but I also enjoy working with textures and a more delicate visual style.',
+            contact_invite: 'If my work has caught your interest, feel free to contact me!'
+        }
+    };
+
+    let lang = localStorage.getItem('lang') || 'cs';
+    document.getElementById('lang-switch').value = lang;
+    updateLanguage();
+
+    document.getElementById('lang-switch').addEventListener('change', (e) => {
+        lang = e.target.value;
+        localStorage.setItem('lang', lang);
+        updateLanguage();
+    });
+
+    function updateLanguage() {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            el.textContent = texts[lang][el.dataset.key];
+        });
+        document.documentElement.lang = lang;
+    }
+</script>
+</body>
+</html>
